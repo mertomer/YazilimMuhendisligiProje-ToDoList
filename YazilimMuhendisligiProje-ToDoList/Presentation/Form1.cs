@@ -10,11 +10,26 @@ using System.Windows.Forms;
 
 namespace YazilimMuhendisligiProje_ToDoList
 {
-    public partial class Form1 : Form
+    public partial class ToDoList : Form
     {
-        public Form1()
+        public ToDoList()
         {
             InitializeComponent();
+        }
+
+        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void düaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
