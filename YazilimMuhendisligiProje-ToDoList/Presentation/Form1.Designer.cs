@@ -31,7 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ToDoList));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnYeni = new System.Windows.Forms.ToolStripButton();
+            this.btnDuzelt = new System.Windows.Forms.ToolStripButton();
             this.btnSil = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.btnKes = new System.Windows.Forms.ToolStripButton();
             this.btnKopyala = new System.Windows.Forms.ToolStripButton();
@@ -48,16 +50,14 @@
             this.mnuHakkinda = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuUygulamaHakkinda = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuYardim = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnDuzelt = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.lblTamamlananlarListesi = new System.Windows.Forms.Label();
-            this.lstTamamlananlarListesi = new System.Windows.Forms.ListBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.lblYapilacaklarListesi = new System.Windows.Forms.Label();
-            this.grpYeniGorev = new System.Windows.Forms.GroupBox();
             this.clbYapilacaklarListesi = new System.Windows.Forms.CheckedListBox();
+            this.lblYapilacaklarListesi = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.grpYeniGorev = new System.Windows.Forms.GroupBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lstTamamlananlarListesi = new System.Windows.Forms.ListBox();
+            this.lblTamamlananlarListesi = new System.Windows.Forms.Label();
             this.toolStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -96,6 +96,15 @@
             this.btnYeni.Size = new System.Drawing.Size(29, 24);
             this.btnYeni.Text = " ";
             // 
+            // btnDuzelt
+            // 
+            this.btnDuzelt.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnDuzelt.Image = global::YazilimMuhendisligiProje_ToDoList.Properties.Resources._1564503_add_business_edit_editor_new_icon__1_;
+            this.btnDuzelt.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnDuzelt.Name = "btnDuzelt";
+            this.btnDuzelt.Size = new System.Drawing.Size(29, 24);
+            this.btnDuzelt.Text = "toolStripButton1";
+            // 
             // btnSil
             // 
             this.btnSil.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -104,6 +113,11 @@
             this.btnSil.Name = "btnSil";
             this.btnSil.Size = new System.Drawing.Size(29, 24);
             this.btnSil.Text = "&Open";
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
             // toolStripSeparator
             // 
@@ -175,7 +189,7 @@
             // mnuCikis
             // 
             this.mnuCikis.Name = "mnuCikis";
-            this.mnuCikis.Size = new System.Drawing.Size(224, 26);
+            this.mnuCikis.Size = new System.Drawing.Size(122, 26);
             this.mnuCikis.Text = "Çıkış";
             // 
             // mnuToDo
@@ -191,20 +205,20 @@
             // mnuYeni
             // 
             this.mnuYeni.Name = "mnuYeni";
-            this.mnuYeni.Size = new System.Drawing.Size(224, 26);
+            this.mnuYeni.Size = new System.Drawing.Size(135, 26);
             this.mnuYeni.Text = "Yeni";
             // 
             // mnuDuzelt
             // 
             this.mnuDuzelt.Name = "mnuDuzelt";
-            this.mnuDuzelt.Size = new System.Drawing.Size(224, 26);
+            this.mnuDuzelt.Size = new System.Drawing.Size(135, 26);
             this.mnuDuzelt.Text = "Düzelt";
             this.mnuDuzelt.Click += new System.EventHandler(this.düaToolStripMenuItem_Click);
             // 
             // mnuSil
             // 
             this.mnuSil.Name = "mnuSil";
-            this.mnuSil.Size = new System.Drawing.Size(224, 26);
+            this.mnuSil.Size = new System.Drawing.Size(135, 26);
             this.mnuSil.Text = "Sil";
             // 
             // mnuHakkinda
@@ -227,20 +241,6 @@
             this.mnuYardim.Name = "mnuYardim";
             this.mnuYardim.Size = new System.Drawing.Size(225, 26);
             this.mnuYardim.Text = "Yardım";
-            // 
-            // btnDuzelt
-            // 
-            this.btnDuzelt.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnDuzelt.Image = global::YazilimMuhendisligiProje_ToDoList.Properties.Resources._1564503_add_business_edit_editor_new_icon__1_;
-            this.btnDuzelt.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnDuzelt.Name = "btnDuzelt";
-            this.btnDuzelt.Size = new System.Drawing.Size(29, 24);
-            this.btnDuzelt.Text = "toolStripButton1";
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
             // splitContainer1
             // 
@@ -265,34 +265,14 @@
             this.splitContainer1.SplitterDistance = 593;
             this.splitContainer1.TabIndex = 2;
             // 
-            // lblTamamlananlarListesi
+            // clbYapilacaklarListesi
             // 
-            this.lblTamamlananlarListesi.AutoSize = true;
-            this.lblTamamlananlarListesi.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblTamamlananlarListesi.Location = new System.Drawing.Point(5, 6);
-            this.lblTamamlananlarListesi.Name = "lblTamamlananlarListesi";
-            this.lblTamamlananlarListesi.Padding = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.lblTamamlananlarListesi.Size = new System.Drawing.Size(162, 30);
-            this.lblTamamlananlarListesi.TabIndex = 3;
-            this.lblTamamlananlarListesi.Text = "Tamamlananlar Listesi";
-            // 
-            // lstTamamlananlarListesi
-            // 
-            this.lstTamamlananlarListesi.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lstTamamlananlarListesi.FormattingEnabled = true;
-            this.lstTamamlananlarListesi.ItemHeight = 18;
-            this.lstTamamlananlarListesi.Location = new System.Drawing.Point(5, 36);
-            this.lstTamamlananlarListesi.Name = "lstTamamlananlarListesi";
-            this.lstTamamlananlarListesi.Size = new System.Drawing.Size(489, 468);
-            this.lstTamamlananlarListesi.TabIndex = 4;
-            // 
-            // panel1
-            // 
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(5, 118);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(583, 10);
-            this.panel1.TabIndex = 0;
+            this.clbYapilacaklarListesi.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.clbYapilacaklarListesi.FormattingEnabled = true;
+            this.clbYapilacaklarListesi.Location = new System.Drawing.Point(5, 158);
+            this.clbYapilacaklarListesi.Name = "clbYapilacaklarListesi";
+            this.clbYapilacaklarListesi.Size = new System.Drawing.Size(583, 346);
+            this.clbYapilacaklarListesi.TabIndex = 3;
             // 
             // lblYapilacaklarListesi
             // 
@@ -304,6 +284,14 @@
             this.lblYapilacaklarListesi.Size = new System.Drawing.Size(136, 30);
             this.lblYapilacaklarListesi.TabIndex = 2;
             this.lblYapilacaklarListesi.Text = "Yapılacaklar Listesi";
+            // 
+            // panel1
+            // 
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(5, 118);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(583, 10);
+            this.panel1.TabIndex = 0;
             // 
             // grpYeniGorev
             // 
@@ -317,15 +305,6 @@
             this.grpYeniGorev.TabStop = false;
             this.grpYeniGorev.Text = "Yeni Görev";
             // 
-            // clbYapilacaklarListesi
-            // 
-            this.clbYapilacaklarListesi.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.clbYapilacaklarListesi.FormattingEnabled = true;
-            this.clbYapilacaklarListesi.Location = new System.Drawing.Point(5, 158);
-            this.clbYapilacaklarListesi.Name = "clbYapilacaklarListesi";
-            this.clbYapilacaklarListesi.Size = new System.Drawing.Size(583, 346);
-            this.clbYapilacaklarListesi.TabIndex = 3;
-            // 
             // textBox1
             // 
             this.textBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -335,6 +314,27 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(563, 74);
             this.textBox1.TabIndex = 5;
+            // 
+            // lstTamamlananlarListesi
+            // 
+            this.lstTamamlananlarListesi.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lstTamamlananlarListesi.FormattingEnabled = true;
+            this.lstTamamlananlarListesi.ItemHeight = 18;
+            this.lstTamamlananlarListesi.Location = new System.Drawing.Point(5, 36);
+            this.lstTamamlananlarListesi.Name = "lstTamamlananlarListesi";
+            this.lstTamamlananlarListesi.Size = new System.Drawing.Size(489, 468);
+            this.lstTamamlananlarListesi.TabIndex = 4;
+            // 
+            // lblTamamlananlarListesi
+            // 
+            this.lblTamamlananlarListesi.AutoSize = true;
+            this.lblTamamlananlarListesi.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblTamamlananlarListesi.Location = new System.Drawing.Point(5, 6);
+            this.lblTamamlananlarListesi.Name = "lblTamamlananlarListesi";
+            this.lblTamamlananlarListesi.Padding = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.lblTamamlananlarListesi.Size = new System.Drawing.Size(162, 30);
+            this.lblTamamlananlarListesi.TabIndex = 3;
+            this.lblTamamlananlarListesi.Text = "Tamamlananlar Listesi";
             // 
             // ToDoList
             // 
