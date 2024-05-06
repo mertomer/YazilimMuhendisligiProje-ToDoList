@@ -99,17 +99,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data Acces\Class1.cs" />
-    <Compile Include="frmRegister.cs">
+    <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmRegister.Designer.cs">
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\frmRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\frmRegister.Designer.cs">
       <DependentUpon>frmRegister.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentation\Form1.cs">
+    <Compile Include="Presentation\frmToDo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentation\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Presentation\frmToDo.Designer.cs">
+      <DependentUpon>frmToDo.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentation\frmLogin.cs">
       <SubType>Form</SubType>
@@ -119,11 +125,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmRegister.resx">
+    <EmbeddedResource Include="Presentation\frmRegister.resx">
       <DependentUpon>frmRegister.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentation\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Presentation\frmToDo.resx">
+      <DependentUpon>frmToDo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
