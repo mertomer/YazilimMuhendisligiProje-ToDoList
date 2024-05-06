@@ -16,7 +16,7 @@ namespace YazilimMuhendisligiProje_ToDoList
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ToDoList());
+            Application.Run(new frmRegister());
         }
     }
 }
