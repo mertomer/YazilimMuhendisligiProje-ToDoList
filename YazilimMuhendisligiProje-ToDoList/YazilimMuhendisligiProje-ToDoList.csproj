@@ -105,10 +105,10 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form2.cs">
+    <Compile Include="Presentation\Form2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2.Designer.cs">
+    <Compile Include="Presentation\Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentation\frmRegister.cs">
@@ -116,12 +116,6 @@
     </Compile>
     <Compile Include="Presentation\frmRegister.Designer.cs">
       <DependentUpon>frmRegister.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Presentation\frmToDo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Presentation\frmToDo.Designer.cs">
-      <DependentUpon>frmToDo.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentation\frmLogin.cs">
       <SubType>Form</SubType>
@@ -133,9 +127,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Presentation\frmRegister.resx">
       <DependentUpon>frmRegister.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Presentation\frmToDo.resx">
-      <DependentUpon>frmToDo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
