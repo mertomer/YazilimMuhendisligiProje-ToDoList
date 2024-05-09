@@ -7,7 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.OleDb;
+using System.Data.SqlClient;
+
 
 namespace YazilimMuhendisligiProje_ToDoList.Presentation
 {
@@ -17,20 +18,22 @@ namespace YazilimMuhendisligiProje_ToDoList.Presentation
         {
             InitializeComponent();
         }
-        OleDbConnection con = new OleDbConnection("Provider=Microsof.Jet.OLEDB.4.0;Data Source=db_users.mdb");
-        OleDbCommand cmd = new OleDbCommand();
-        OleDbDataAdapter da = new OleDbDataAdapter();
+        SqlConnection baglanti=new SqlConnection(@"Data Source=DESKTOP-3VHA91B\SQLEXPRESS;Initial Catalog=db_YapilacaklarListesi;Integrated Security=True;");
 
         private void button1_Click(object sender, EventArgs e)
         {
-            con.Open();
-            string login = "Select * From tbl_users where username='" + txtUsername.Text + "' and password='" + txtPassword.Text + "'";
-            cmd=new OleDbCommand(login,con);
-            OleDbDataReader dr=cmd.ExecuteReader();
+            baglanti.Open();
+            string query = "SELECT * FROM TBLUSER WHERE username = @username AND password = @password";
+            SqlCommand command = new SqlCommand(query, baglanti);
+            command.Parameters.AddWithValue("@username", txtUsername.Text);
+            command.Parameters.AddWithValue("@password", txtPassword.Text);
+            SqlDataReader dr = command.ExecuteReader();
+
+
 
             if (dr.Read()==true)
             {
-                new Form1().Show();
+                new Form2().Show();
                 this.Hide();
 
             }
@@ -75,3 +78,4 @@ namespace YazilimMuhendisligiProje_ToDoList.Presentation
         }
     }
 }
+//Data Source=DESKTOP-3VHA91B\SQLEXPRESS;Initial Catalog=db_YapilacaklarListesi;Integrated Security=True;Trust Server Certificate=True

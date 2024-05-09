@@ -7,8 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.OleDb;
+using System.Data.SqlClient;
 using YazilimMuhendisligiProje_ToDoList.Presentation;
+using System.Collections;
 
 namespace YazilimMuhendisligiProje_ToDoList
 {
@@ -19,9 +20,8 @@ namespace YazilimMuhendisligiProje_ToDoList
             InitializeComponent();
             
         }
-        OleDbConnection con = new OleDbConnection("Provider=Microsof.Jet.OLEDB.4.0;Data Source=db_users.mdb");
-        OleDbCommand cmd = new OleDbCommand();
-        OleDbDataAdapter da = new OleDbDataAdapter();
+        SqlConnection baglanti = new SqlConnection(@"Data Source=DESKTOP-3VHA91B\SQLEXPRESS;Initial Catalog=db_YapilacaklarListesi;Integrated Security=True;");
+
         private void button1_Click(object sender, EventArgs e)
         {
             if (txtUsername.Text == "" && txtPassword.Text == "" && txtComPassword.Text == "")
@@ -29,15 +29,18 @@ namespace YazilimMuhendisligiProje_ToDoList
                 MessageBox.Show("Kullanıcı adı ve Şifre alanları boş bırakılamaz", "Kayıt işlemi başarısız",MessageBoxButtons.OK,MessageBoxIcon.Error);
 
             }
-            else if (txtUsername.Text == txtComPassword.Text)
+            else if (txtPassword.Text == txtComPassword.Text)
             {
-                con.Open();
-                String register = "INSERT INTO tbl_users Values('" + txtUsername.Text + "','" + txtPassword.Text + "')";
-                cmd= new OleDbCommand(register,con);
-                cmd.ExecuteNonQuery();
-                con.Close();
-               
-                
+                baglanti.Open();
+                string register = "INSERT INTO TBLUSER (username, password) VALUES (@username, @password)";
+                SqlCommand command = new SqlCommand(register, baglanti);
+                command.Parameters.AddWithValue("@username", txtUsername.Text);
+                command.Parameters.AddWithValue("@password", txtPassword.Text);
+                command.ExecuteNonQuery();
+
+
+
+
                 txtUsername.Text = "";
                 txtPassword.Text = "";
                 txtComPassword.Text = "";
@@ -81,6 +84,11 @@ namespace YazilimMuhendisligiProje_ToDoList
         {
             new frmLogin().Show();
             this.Hide();
+        }
+
+        private void frmRegister_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
