@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using YazilimMuhendisligiProje_ToDoList.Presentation;
 
 namespace YazilimMuhendisligiProje_ToDoList
 {
@@ -16,7 +17,11 @@ namespace YazilimMuhendisligiProje_ToDoList
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Presentation.Form3());
+
+          
+
+            Application.Run(new frmLogin());
+
         }
     }
 }
