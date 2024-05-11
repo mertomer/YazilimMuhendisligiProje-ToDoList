@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,10 +13,14 @@ namespace YazilimMuhendisligiProje_ToDoList
 {
     public partial class QuickNoteForm : Form
     {
+       public int userId;
         public QuickNoteForm()
         {
             InitializeComponent();
+          int user=this.userId;
         }
+        SqlConnection baglanti = new SqlConnection(@"Data Source=DESKTOP-3VHA91B\SQLEXPRESS;Initial Catalog=DBYAPILACAKLARLISTESI1;Integrated Security=True;");
+
 
         private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
@@ -39,7 +44,33 @@ namespace YazilimMuhendisligiProje_ToDoList
 
         private void newToolStripButton_Click(object sender, EventArgs e)
         {
+            if(textBox1.Text=="")
+    {
+                MessageBox.Show("Lütfen bir not giriniz.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            else
+            {
+                int user = userId;
+                string sqlQuery = "INSERT INTO TBLQUICKNOTE ([User], QuickNote, NoteDate) VALUES (@UserId, @NoteContent, @NoteDate)";
+                DateTime noteDate = DateTime.Now;
+                clbYapilacaklarListesi.Items.Add(textBox1.Text);
+                using (SqlCommand command = new SqlCommand(sqlQuery, baglanti))
+                {
+                    // Parametrelerin tanımlanması ve değerlerin atanması
+                    command.Parameters.AddWithValue("@UserID", user);
+                    command.Parameters.AddWithValue("@NoteContent", textBox1.Text);
+                    command.Parameters.AddWithValue("@NoteDate", noteDate);
 
+                    // Bağlantı açılır ve komut çalıştırılır
+                    baglanti.Open();
+                    command.ExecuteNonQuery();
+
+                    // Not eklendiğine dair bir mesaj göster
+                    MessageBox.Show("Not başarıyla eklendi.");
+                }
+
+            }
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
