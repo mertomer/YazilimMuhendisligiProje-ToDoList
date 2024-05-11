@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace YazilimMuhendisligiProje_ToDoList
 {
-    public partial class Form2 : Form
+    public partial class QuickNoteForm : Form
     {
-        public Form2()
+        public QuickNoteForm()
         {
             InitializeComponent();
         }

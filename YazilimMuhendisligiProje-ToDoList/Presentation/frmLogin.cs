@@ -33,7 +33,7 @@ namespace YazilimMuhendisligiProje_ToDoList.Presentation
 
             if (dr.Read()==true)
             {
-                new Form2().Show();
+                new QuickNoteForm().Show();
                 this.Hide();
 
             }
