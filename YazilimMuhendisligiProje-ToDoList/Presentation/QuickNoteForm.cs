@@ -17,9 +17,44 @@ namespace YazilimMuhendisligiProje_ToDoList
         public QuickNoteForm()
         {
             InitializeComponent();
-          
+            this.Load += QuickNoteForm_Load;
+
         }
         SqlConnection baglanti = new SqlConnection(@"Data Source=DESKTOP-3VHA91B\SQLEXPRESS;Initial Catalog=DBYAPILACAKLARLISTESI1;Integrated Security=True;");
+        private void QuickNoteForm_Load(object sender, EventArgs e)
+        {
+           
+            List<string> kullaniciNotlari = NotlariCek(userId);
+            foreach (string not in kullaniciNotlari)
+            {
+                clbYapilacaklarListesi.Items.Add(not);
+            }
+        }
+
+       
+        private List<string> NotlariCek(int userId)
+        {
+            List<string> notlar = new List<string>();
+          
+            string sqlQuery = "SELECT QuickNote,NoteDate FROM TBLQUICKNOTE WHERE [User] = @UserId";
+            
+            
+                using (SqlCommand command = new SqlCommand(sqlQuery, baglanti))
+                {
+                    command.Parameters.AddWithValue("@UserId", userId);
+                    baglanti.Open();
+                    SqlDataReader reader = command.ExecuteReader();
+                    while (reader.Read())
+                    {
+                    string not = $"{reader.GetString(0)} - {reader.GetDateTime(1)}";
+                    notlar.Add(not);
+                    }
+                    baglanti.Close();
+                }
+            
+            return notlar;
+        }
+       
         public int userId;
 
         private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
@@ -54,19 +89,19 @@ namespace YazilimMuhendisligiProje_ToDoList
                 int user = userId;
                 string sqlQuery = "INSERT INTO TBLQUICKNOTE ([User], QuickNote, NoteDate) VALUES (@UserId, @NoteContent, @NoteDate)";
                 DateTime noteDate = DateTime.Now;
-                clbYapilacaklarListesi.Items.Add(textBox1.Text);
+                clbYapilacaklarListesi.Items.Add(textBox1.Text+" - "+noteDate);
                 using (SqlCommand command = new SqlCommand(sqlQuery, baglanti))
                 {
-                    // Parametrelerin tanımlanması ve değerlerin atanması
+                    
                     command.Parameters.AddWithValue("@UserID", user);
                     command.Parameters.AddWithValue("@NoteContent", textBox1.Text);
                     command.Parameters.AddWithValue("@NoteDate", noteDate);
 
-                    // Bağlantı açılır ve komut çalıştırılır
+                    
                     baglanti.Open();
                     command.ExecuteNonQuery();
 
-                    // Not eklendiğine dair bir mesaj göster
+                    
                     MessageBox.Show("Not başarıyla eklendi.");
                     baglanti.Close();
                 }
