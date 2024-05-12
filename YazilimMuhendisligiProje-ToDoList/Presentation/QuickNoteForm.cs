@@ -13,14 +13,14 @@ namespace YazilimMuhendisligiProje_ToDoList
 {
     public partial class QuickNoteForm : Form
     {
-       public int userId;
+       
         public QuickNoteForm()
         {
             InitializeComponent();
-          int user=this.userId;
+          
         }
         SqlConnection baglanti = new SqlConnection(@"Data Source=DESKTOP-3VHA91B\SQLEXPRESS;Initial Catalog=DBYAPILACAKLARLISTESI1;Integrated Security=True;");
-
+        public int userId;
 
         private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
@@ -68,6 +68,7 @@ namespace YazilimMuhendisligiProje_ToDoList
 
                     // Not eklendiğine dair bir mesaj göster
                     MessageBox.Show("Not başarıyla eklendi.");
+                    baglanti.Close();
                 }
 
             }

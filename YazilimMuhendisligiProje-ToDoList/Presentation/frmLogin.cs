@@ -34,8 +34,11 @@ namespace YazilimMuhendisligiProje_ToDoList.Presentation
             if (dr.Read()==true)
             {
                 
-               int userId = dr.GetInt32(0);
-                new QuickNoteForm().Show();
+                
+                QuickNoteForm frm = new QuickNoteForm();
+                frm.userId = dr.GetInt32(0);
+                frm.Show();
+
                 this.Hide();
 
             }
@@ -81,3 +84,4 @@ namespace YazilimMuhendisligiProje_ToDoList.Presentation
     }
 }
 //Data Source=DESKTOP-3VHA91B\SQLEXPRESS;Initial Catalog=db_YapilacaklarListesi;Integrated Security=True;Trust Server Certificate=True
+//Data Source=DESKTOP-3VHA91B\SQLEXPRESS;Initial Catalog=DBYAPILACAKLARLISTESI1;Integrated Security=True;"
