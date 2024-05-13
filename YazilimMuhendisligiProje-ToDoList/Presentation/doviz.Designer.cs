@@ -68,7 +68,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(141, 30);
             this.label3.TabIndex = 3;
-            this.label3.Text = "Dolar Satış :";
+            this.label3.Text = "Euro Satış :";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
