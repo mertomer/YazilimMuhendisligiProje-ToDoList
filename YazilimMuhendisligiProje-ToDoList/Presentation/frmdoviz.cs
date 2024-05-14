@@ -11,9 +11,9 @@ using System.Xml;
 
 namespace YazilimMuhendisligiProje_ToDoList.Presentation
 {
-    public partial class doviz : Form
+    public partial class frmdoviz : Form
     {
-        public doviz()
+        public frmdoviz()
         {
             InitializeComponent();
         }

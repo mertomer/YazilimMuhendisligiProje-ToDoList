@@ -1,6 +1,6 @@
 ﻿namespace YazilimMuhendisligiProje_ToDoList.Presentation
 {
-    partial class doviz
+    partial class frmdoviz
     {
         /// <summary>
         /// Required designer variable.
@@ -122,7 +122,7 @@
             this.euroSatisText.TabIndex = 7;
             this.euroSatisText.Click += new System.EventHandler(this.euroSatisText_Click);
             // 
-            // doviz
+            // frmdoviz
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -137,7 +137,8 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "doviz";
+            this.Name = "frmdoviz";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Döviz Kuru İşlemleri";
             this.Load += new System.EventHandler(this.doviz_Load);
             this.ResumeLayout(false);

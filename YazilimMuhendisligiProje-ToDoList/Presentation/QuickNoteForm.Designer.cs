@@ -56,6 +56,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.lstTamamlananlarListesi = new System.Windows.Forms.ListBox();
             this.lblTamamlananlarListesi = new System.Windows.Forms.Label();
+            this.dövizToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -173,13 +174,14 @@
             // çıkışToolStripMenuItem
             // 
             this.çıkışToolStripMenuItem.Name = "çıkışToolStripMenuItem";
-            this.çıkışToolStripMenuItem.Size = new System.Drawing.Size(122, 26);
+            this.çıkışToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.çıkışToolStripMenuItem.Text = "Çıkış";
             // 
             // toDToolStripMenuItem
             // 
             this.toDToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.yeToolStripMenuItem,
+            this.dövizToolStripMenuItem,
             this.düzeltToolStripMenuItem,
             this.silToolStripMenuItem,
             this.tamamlandıToolStripMenuItem});
@@ -191,27 +193,27 @@
             // 
             this.yeToolStripMenuItem.Image = global::YazilimMuhendisligiProje_ToDoList.Properties.Resources._1564491_add_create_new_plus_icon;
             this.yeToolStripMenuItem.Name = "yeToolStripMenuItem";
-            this.yeToolStripMenuItem.Size = new System.Drawing.Size(173, 26);
+            this.yeToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.yeToolStripMenuItem.Text = "Yeni";
             // 
             // düzeltToolStripMenuItem
             // 
             this.düzeltToolStripMenuItem.Image = global::YazilimMuhendisligiProje_ToDoList.Properties.Resources._1564503_add_business_edit_editor_new_icon__1_;
             this.düzeltToolStripMenuItem.Name = "düzeltToolStripMenuItem";
-            this.düzeltToolStripMenuItem.Size = new System.Drawing.Size(173, 26);
+            this.düzeltToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.düzeltToolStripMenuItem.Text = "Düzelt";
             // 
             // silToolStripMenuItem
             // 
             this.silToolStripMenuItem.Image = global::YazilimMuhendisligiProje_ToDoList.Properties.Resources._1564505_close_delete_exit_remove_icon;
             this.silToolStripMenuItem.Name = "silToolStripMenuItem";
-            this.silToolStripMenuItem.Size = new System.Drawing.Size(173, 26);
+            this.silToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.silToolStripMenuItem.Text = "Sil";
             // 
             // tamamlandıToolStripMenuItem
             // 
             this.tamamlandıToolStripMenuItem.Name = "tamamlandıToolStripMenuItem";
-            this.tamamlandıToolStripMenuItem.Size = new System.Drawing.Size(173, 26);
+            this.tamamlandıToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.tamamlandıToolStripMenuItem.Text = "Tamamlandı";
             // 
             // hakkındaToolStripMenuItem
@@ -233,7 +235,7 @@
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.Location = new System.Drawing.Point(0, 55);
-            this.splitContainer1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(5);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -260,7 +262,7 @@
             this.clbYapilacaklarListesi.Dock = System.Windows.Forms.DockStyle.Fill;
             this.clbYapilacaklarListesi.FormattingEnabled = true;
             this.clbYapilacaklarListesi.Location = new System.Drawing.Point(9, 203);
-            this.clbYapilacaklarListesi.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.clbYapilacaklarListesi.Margin = new System.Windows.Forms.Padding(5);
             this.clbYapilacaklarListesi.Name = "clbYapilacaklarListesi";
             this.clbYapilacaklarListesi.Size = new System.Drawing.Size(399, 402);
             this.clbYapilacaklarListesi.TabIndex = 6;
@@ -282,7 +284,7 @@
             // 
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(9, 158);
-            this.panel1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.panel1.Margin = new System.Windows.Forms.Padding(5);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(399, 15);
             this.panel1.TabIndex = 4;
@@ -292,7 +294,7 @@
             this.grpYeniGorev.Controls.Add(this.textBox1);
             this.grpYeniGorev.Dock = System.Windows.Forms.DockStyle.Top;
             this.grpYeniGorev.Location = new System.Drawing.Point(9, 7);
-            this.grpYeniGorev.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.grpYeniGorev.Margin = new System.Windows.Forms.Padding(5);
             this.grpYeniGorev.Name = "grpYeniGorev";
             this.grpYeniGorev.Padding = new System.Windows.Forms.Padding(17, 15, 17, 15);
             this.grpYeniGorev.Size = new System.Drawing.Size(399, 151);
@@ -304,7 +306,7 @@
             // 
             this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBox1.Location = new System.Drawing.Point(17, 30);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(5);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(365, 106);
@@ -317,7 +319,7 @@
             this.lstTamamlananlarListesi.FormattingEnabled = true;
             this.lstTamamlananlarListesi.ItemHeight = 16;
             this.lstTamamlananlarListesi.Location = new System.Drawing.Point(9, 37);
-            this.lstTamamlananlarListesi.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.lstTamamlananlarListesi.Margin = new System.Windows.Forms.Padding(5);
             this.lstTamamlananlarListesi.Name = "lstTamamlananlarListesi";
             this.lstTamamlananlarListesi.Size = new System.Drawing.Size(429, 568);
             this.lstTamamlananlarListesi.TabIndex = 3;
@@ -334,6 +336,13 @@
             this.lblTamamlananlarListesi.TabIndex = 6;
             this.lblTamamlananlarListesi.Text = "Tamamlananlar Listesi";
             // 
+            // dövizToolStripMenuItem
+            // 
+            this.dövizToolStripMenuItem.Name = "dövizToolStripMenuItem";
+            this.dövizToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.dövizToolStripMenuItem.Text = "Döviz";
+            this.dövizToolStripMenuItem.Click += new System.EventHandler(this.dövizToolStripMenuItem_Click);
+            // 
             // QuickNoteForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -345,7 +354,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "QuickNoteForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";
@@ -395,5 +404,6 @@
         private System.Windows.Forms.ListBox lstTamamlananlarListesi;
         private System.Windows.Forms.Label lblTamamlananlarListesi;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ToolStripMenuItem dövizToolStripMenuItem;
     }
 }

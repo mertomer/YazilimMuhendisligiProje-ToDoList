@@ -186,11 +186,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data Acces\Class1.cs" />
-    <Compile Include="Presentation\doviz.cs">
+    <Compile Include="Presentation\frmdoviz.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentation\doviz.Designer.cs">
-      <DependentUpon>doviz.cs</DependentUpon>
+    <Compile Include="Presentation\frmdoviz.Designer.cs">
+      <DependentUpon>frmdoviz.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentation\QuickNoteForm.cs">
       <SubType>Form</SubType>
@@ -223,8 +223,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>tasksDataSet.xsd</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Presentation\doviz.resx">
-      <DependentUpon>doviz.cs</DependentUpon>
+    <EmbeddedResource Include="Presentation\frmdoviz.resx">
+      <DependentUpon>frmdoviz.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation\QuickNoteForm.resx">
       <DependentUpon>QuickNoteForm.cs</DependentUpon>

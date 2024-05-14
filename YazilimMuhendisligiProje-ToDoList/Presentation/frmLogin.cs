@@ -81,6 +81,11 @@ namespace YazilimMuhendisligiProje_ToDoList.Presentation
             new frmRegister().Show();
             this.Hide();
         }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 //Data Source=DESKTOP-3VHA91B\SQLEXPRESS;Initial Catalog=db_YapilacaklarListesi;Integrated Security=True;Trust Server Certificate=True
