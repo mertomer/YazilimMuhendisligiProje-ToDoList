@@ -186,6 +186,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data Acces\Class1.cs" />
+    <Compile Include="Presentation\doviz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\doviz.Designer.cs">
+      <DependentUpon>doviz.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentation\QuickNoteForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -217,6 +223,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>tasksDataSet.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Presentation\doviz.resx">
+      <DependentUpon>doviz.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentation\QuickNoteForm.resx">
       <DependentUpon>QuickNoteForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -279,6 +288,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="6071809_list_planing_planlist_to do_to do list_icon.ico" />
+    <None Include="Resources\e-doviz-2-1024x638.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
