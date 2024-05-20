@@ -16,6 +16,8 @@ namespace YazilimMuhendisligiProje_ToDoList.Presentation
         public frmFinance()
         {
             InitializeComponent();
+            this.Load += new System.EventHandler(this.Form1_Load);
+
         }
         public string dolarAlis;
         public string dolarSatis;
