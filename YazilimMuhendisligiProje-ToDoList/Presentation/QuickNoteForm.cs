@@ -21,7 +21,7 @@ namespace YazilimMuhendisligiProje_ToDoList
             this.Load += QuickNoteForm_Load;
 
         }
-        SqlConnection baglanti = new SqlConnection(@"Data Source=MERT\SQLEXPRESS;Initial Catalog=db_YapilacaklarListesi23;Integrated Security=True;");
+        SqlConnection baglanti = new SqlConnection(@"Data Source=DESKTOP-3VHA91B\SQLEXPRESS;Initial Catalog=DBYAPILACAKLARLISTESI1;Integrated Security=True;");
         private void QuickNoteForm_Load(object sender, EventArgs e)
         {
            

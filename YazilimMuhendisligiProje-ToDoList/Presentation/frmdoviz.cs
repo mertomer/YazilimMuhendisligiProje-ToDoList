@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,6 +18,10 @@ namespace YazilimMuhendisligiProje_ToDoList.Presentation
         {
             InitializeComponent();
         }
+        public string dolarAlis;
+        public string dolarSatis;
+        public string euroAlis;
+        public string euroSatis;
 
         private void doviz_Load(object sender, EventArgs e)
         {
@@ -24,17 +29,17 @@ namespace YazilimMuhendisligiProje_ToDoList.Presentation
             var xmldosya = new XmlDocument();
             xmldosya.Load(bugun);
             
-            string dolarAlis = xmldosya.SelectSingleNode("Tarih_Date/Currency[@Kod='USD']/BanknoteBuying").InnerXml;
+            dolarAlis = xmldosya.SelectSingleNode("Tarih_Date/Currency[@Kod='USD']/BanknoteBuying").InnerXml;
             dolarAlisText.Text = dolarAlis;
 
-            string dolarsatis = xmldosya.SelectSingleNode("Tarih_Date/Currency[@Kod='USD']/BanknoteSelling").InnerXml;
-            dolarSatisText.Text = dolarsatis;
+             dolarSatis = xmldosya.SelectSingleNode("Tarih_Date/Currency[@Kod='USD']/BanknoteSelling").InnerXml;
+            dolarSatisText.Text = dolarSatis;
 
-            string euroalis = xmldosya.SelectSingleNode("Tarih_Date/Currency[@Kod='EUR']/BanknoteBuying").InnerXml;
-            euroAlisText.Text = euroalis;
+             euroAlis = xmldosya.SelectSingleNode("Tarih_Date/Currency[@Kod='EUR']/BanknoteBuying").InnerXml;
+            euroAlisText.Text = euroAlis;
 
-            string eurosatis = xmldosya.SelectSingleNode("Tarih_Date/Currency[@Kod='EUR']/BanknoteSelling").InnerXml;
-            euroSatisText.Text = eurosatis;
+             euroSatis = xmldosya.SelectSingleNode("Tarih_Date/Currency[@Kod='EUR']/BanknoteSelling").InnerXml;
+            euroSatisText.Text = euroSatis;
 
         }
 
