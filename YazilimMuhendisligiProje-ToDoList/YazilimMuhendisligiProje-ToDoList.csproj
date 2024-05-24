@@ -189,6 +189,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data Acces\Class1.cs" />
+    <Compile Include="Presentation\frmcoin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\frmcoin.Designer.cs">
+      <DependentUpon>frmcoin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentation\frmdoviz.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -232,6 +238,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>tasksDataSet.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Presentation\frmcoin.resx">
+      <DependentUpon>frmcoin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentation\frmdoviz.resx">
       <DependentUpon>frmdoviz.cs</DependentUpon>
     </EmbeddedResource>
