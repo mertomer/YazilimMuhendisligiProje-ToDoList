@@ -13,16 +13,38 @@ using System.Data.SqlClient;
 namespace YazilimMuhendisligiProje_ToDoList.Presentation
 {
     public partial class Form3 : Form
+   
+    
     {
-        static string constring = "Data Source=LAPTOP-DR0CC8RT\\SQLEXPRESS;Initial Catalog=tasks;Integrated Security=True;Trust Server Certificate=True";
-        private SqlConnection connect = new SqlConnection();
+
+        SqlConnection baglanti;
+        SqlCommand komut;
+        SqlDataAdapter da;
         public Form3()
         {
             InitializeComponent();
          
-            button36.Click += button36_Click;
+           // button36.Click += button36_Click;
 
         }
+
+        public int userId;
+         void kullanicigetir()
+     {
+            string selectedDate = monthCalendar1.SelectionStart.ToString("yyyy-MM-dd");
+
+            baglanti = new SqlConnection("Data Source=LAPTOP-DR0CC8RT\\SQLEXPRESS;Initial Catalog=db_YapilacaklarListesi23;Integrated Security=True;");
+             
+                 baglanti.Open();
+        
+            da =new SqlDataAdapter("SELECT * FROM TBLBIGNOTE WHERE NoteDate = '" + selectedDate + "'", baglanti);
+                     DataTable tablo=new DataTable();
+                    da.Fill(tablo);
+                    dataGridView1.DataSource= tablo;
+               baglanti.Close();
+          
+     }
+
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
@@ -32,7 +54,14 @@ namespace YazilimMuhendisligiProje_ToDoList.Presentation
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            string selectedDate = monthCalendar1.SelectionStart.ToString("yyyy-MM-dd");
+              
+         
+           
+             
+           
+              
+                
         }
 
         private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
@@ -46,6 +75,9 @@ namespace YazilimMuhendisligiProje_ToDoList.Presentation
 
             // Label kontrolüne ay ve yıl bilgisini yazdır
             label8.Text = selectedMonth + " " + selectedYear.ToString();
+
+            kullanicigetir();
+
          
         }
        
@@ -53,30 +85,28 @@ namespace YazilimMuhendisligiProje_ToDoList.Presentation
         private void button36_Click(object sender, EventArgs e)
         {
             string selectedDate = monthCalendar1.SelectionStart.ToString("yyyy-MM-dd");
-            string work = textBox1.Text;
+            string task = txtBox1.Text;
+            int user;
+            user = userId;
+            frmLogin frmLogin = new frmLogin();
+            string sorgu = "INSERT INTO TBLBIGNOTE([User],BigNote,NoteDate) VALUES(@user,@task,@selectedDate)";
+            komut = new SqlCommand(sorgu, baglanti);
+
+            
+                             
+            baglanti.Open();
+
+            komut.Parameters.AddWithValue("@[User]", user);
+            komut.Parameters.AddWithValue("@BigNote",task);
+            komut.Parameters.AddWithValue("@NoteDate", selectedDate);
+             
+           
+           komut.ExecuteNonQuery();
+            baglanti.Close();
+
+            kullanicigetir();
 
 
-            //-----------------------------------------
-
-            try
-            {
-                if (connect.State== ConnectionState.Closed)
-                
-                    connect.Open();
-                string kayit = "insert into Tasks(Tarih,Task) values @Tarih,@Task";
-                SqlCommand komut = new SqlCommand(kayit, connect);
-                komut.Parameters.AddWithValue("@Tarih", selectedDate);
-                komut.Parameters.AddWithValue("@Task", textBox1);
-
-                komut.ExecuteNonQuery();
-
-                connect.Close();
-
-                MessageBox.Show("Kayıt eklendi");
-            }
-            catch (Exception hata) {
-            MessageBox.Show("Hata Meydana geldi. "+hata );
-            }
 
 
         }
@@ -88,7 +118,7 @@ namespace YazilimMuhendisligiProje_ToDoList.Presentation
 
         private void Form3_Load(object sender, EventArgs e)
         {
-
+            kullanicigetir();
         }
     }
 }

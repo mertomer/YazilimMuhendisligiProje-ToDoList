@@ -8,17 +8,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using ServiceStack;
+using Org.BouncyCastle.Bcpg;
 
 
 namespace YazilimMuhendisligiProje_ToDoList.Presentation
 {
     public partial class frmLogin : Form
     {
+      public int UserWrite;
+      
         public frmLogin()
         {
             InitializeComponent();
         }
-        SqlConnection baglanti=new SqlConnection(@"Data Source=DESKTOP-3VHA91B\SQLEXPRESS;Initial Catalog=DBYAPILACAKLARLISTESI1;Integrated Security=True;");
+        SqlConnection baglanti=new SqlConnection(@"Data Source=LAPTOP-DR0CC8RT\SQLEXPRESS;Initial Catalog=db_YapilacaklarListesi23;Integrated Security=True;");
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -29,14 +33,16 @@ namespace YazilimMuhendisligiProje_ToDoList.Presentation
             command.Parameters.AddWithValue("@password", txtPassword.Text);
             SqlDataReader dr = command.ExecuteReader();
 
-
+       
 
             if (dr.Read()==true)
             {
                 
                 
                 QuickNoteForm frm = new QuickNoteForm();
+                
                 frm.userId = dr.GetInt32(0);
+                UserWrite = frm.userId;
                 frm.Show();
 
                 this.Hide();

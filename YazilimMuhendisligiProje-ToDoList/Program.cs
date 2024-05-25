@@ -17,7 +17,13 @@ namespace YazilimMuhendisligiProje_ToDoList
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+<<<<<<< HEAD
+            Application.Run(new Form3());
+
+           
+=======
             Application.Run(new frmcoin());
+>>>>>>> a9fca082bdba4b7a12e0d9eadbb786e80f4751d2
         }
     }
 }

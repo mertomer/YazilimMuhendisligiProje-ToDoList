@@ -20,7 +20,7 @@ namespace YazilimMuhendisligiProje_ToDoList
             InitializeComponent();
             
         }
-        SqlConnection baglanti = new SqlConnection(@"Data Source=MERT\SQLEXPRESS;Initial Catalog=db_YapilacaklarListesi23;Integrated Security=True;");
+        SqlConnection baglanti = new SqlConnection(@"Data Source=LAPTOP-DR0CC8RT\SQLEXPRESS;Initial Catalog=db_YapilacaklarListesi23;Integrated Security=True;");
 
         private void button1_Click(object sender, EventArgs e)
         {
