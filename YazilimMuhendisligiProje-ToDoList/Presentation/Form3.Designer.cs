@@ -34,12 +34,13 @@
             this.label8 = new System.Windows.Forms.Label();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.gtrTxt = new System.Windows.Forms.Button();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtBox1
             // 
-            this.txtBox1.Location = new System.Drawing.Point(57, 306);
+            this.txtBox1.Location = new System.Drawing.Point(57, 293);
             this.txtBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtBox1.Multiline = true;
             this.txtBox1.Name = "txtBox1";
@@ -48,7 +49,7 @@
             // 
             // button36
             // 
-            this.button36.Location = new System.Drawing.Point(124, 460);
+            this.button36.Location = new System.Drawing.Point(121, 471);
             this.button36.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button36.Name = "button36";
             this.button36.Size = new System.Drawing.Size(155, 28);
@@ -89,7 +90,7 @@
             // 
             // gtrTxt
             // 
-            this.gtrTxt.Location = new System.Drawing.Point(646, 442);
+            this.gtrTxt.Location = new System.Drawing.Point(620, 433);
             this.gtrTxt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gtrTxt.Name = "gtrTxt";
             this.gtrTxt.Size = new System.Drawing.Size(105, 30);
@@ -98,11 +99,22 @@
             this.gtrTxt.UseVisualStyleBackColor = true;
             this.gtrTxt.Click += new System.EventHandler(this.gtrTxt_Click);
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.CustomFormat = "HH:mm:ss";
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dateTimePicker1.Location = new System.Drawing.Point(100, 433);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
+            this.dateTimePicker1.TabIndex = 83;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged_1);
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1026, 510);
+            this.ClientSize = new System.Drawing.Size(1006, 511);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.gtrTxt);
             this.Controls.Add(this.monthCalendar1);
             this.Controls.Add(this.dataGridView1);
@@ -126,5 +138,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.MonthCalendar monthCalendar1;
         private System.Windows.Forms.Button gtrTxt;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

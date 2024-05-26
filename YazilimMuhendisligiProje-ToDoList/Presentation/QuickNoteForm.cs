@@ -24,7 +24,6 @@ namespace YazilimMuhendisligiProje_ToDoList
         SqlConnection baglanti = new SqlConnection(@"Data Source=LAPTOP-DR0CC8RT\SQLEXPRESS;Initial Catalog=db_YapilacaklarListesi23;Integrated Security=True;");
         private void QuickNoteForm_Load(object sender, EventArgs e)
         {
-           
             List<string> kullaniciNotlari = NotlariCek(userId);
             foreach (string not in kullaniciNotlari)
             {
@@ -132,6 +131,12 @@ namespace YazilimMuhendisligiProje_ToDoList
         private void dövizToolStripMenuItem_Click(object sender, EventArgs e)
         {
             new frmdoviz().Show();
+            this.Hide();
+        }
+
+        private void bigNoteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new Form3().Show();
             this.Hide();
         }
     }

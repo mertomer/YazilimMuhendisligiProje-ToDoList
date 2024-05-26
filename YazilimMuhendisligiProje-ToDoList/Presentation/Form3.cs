@@ -16,7 +16,7 @@ namespace YazilimMuhendisligiProje_ToDoList.Presentation
    
     
     {
-
+        string saat;
         SqlConnection baglanti;
         SqlCommand komut;
         SqlDataAdapter da;
@@ -24,7 +24,7 @@ namespace YazilimMuhendisligiProje_ToDoList.Presentation
         {
             InitializeComponent();
          
-           // button36.Click += button36_Click;
+          
 
         }
 
@@ -37,7 +37,7 @@ namespace YazilimMuhendisligiProje_ToDoList.Presentation
              
                  baglanti.Open();
         
-            da =new SqlDataAdapter("SELECT * FROM TBLBIGNOTE WHERE NoteDate = '" + selectedDate + "'", baglanti);
+            da =new SqlDataAdapter("SELECT * FROM TBLBIGNOTE WHERE NoteDate = '" + selectedDate + "' and [User]= '"+userId+"'", baglanti);
                      DataTable tablo=new DataTable();
                     da.Fill(tablo);
                     dataGridView1.DataSource= tablo;
@@ -85,6 +85,8 @@ namespace YazilimMuhendisligiProje_ToDoList.Presentation
         private void button36_Click(object sender, EventArgs e)
         {
             string selectedDate = monthCalendar1.SelectionStart.ToString("yyyy-MM-dd");
+            //Burada değerimiz saat dk olarak tutuluyor saniyeyide eklememiz lazım.
+            selectedDate += saat;
             string task = txtBox1.Text;
             int user;
             user = userId;
@@ -93,7 +95,7 @@ namespace YazilimMuhendisligiProje_ToDoList.Presentation
             komut = new SqlCommand(sorgu, baglanti);
 
             
-                             
+                            
             baglanti.Open();
 
             komut.Parameters.AddWithValue("@[User]", user);
@@ -119,6 +121,15 @@ namespace YazilimMuhendisligiProje_ToDoList.Presentation
         private void Form3_Load(object sender, EventArgs e)
         {
             kullanicigetir();
+            dateTimePicker1.Format = DateTimePickerFormat.Custom;
+            dateTimePicker1.CustomFormat = "HH:mm";
+            dateTimePicker1.ShowUpDown = true;
+        }
+
+        private void dateTimePicker1_ValueChanged_1(object sender, EventArgs e)
+        {
+            DateTime selectedTime = dateTimePicker1.Value;
+             saat = selectedTime.ToString("HH:mm");
         }
     }
 }

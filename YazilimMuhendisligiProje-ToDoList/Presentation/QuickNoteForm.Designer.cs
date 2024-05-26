@@ -57,6 +57,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.lstTamamlananlarListesi = new System.Windows.Forms.ListBox();
             this.lblTamamlananlarListesi = new System.Windows.Forms.Label();
+            this.bigNoteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -184,7 +185,8 @@
             this.dövizToolStripMenuItem,
             this.düzeltToolStripMenuItem,
             this.silToolStripMenuItem,
-            this.tamamlandıToolStripMenuItem});
+            this.tamamlandıToolStripMenuItem,
+            this.bigNoteToolStripMenuItem});
             this.toDToolStripMenuItem.Name = "toDToolStripMenuItem";
             this.toDToolStripMenuItem.Size = new System.Drawing.Size(59, 24);
             this.toDToolStripMenuItem.Text = "ToDo";
@@ -343,6 +345,13 @@
             this.lblTamamlananlarListesi.TabIndex = 6;
             this.lblTamamlananlarListesi.Text = "Tamamlananlar Listesi";
             // 
+            // bigNoteToolStripMenuItem
+            // 
+            this.bigNoteToolStripMenuItem.Name = "bigNoteToolStripMenuItem";
+            this.bigNoteToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.bigNoteToolStripMenuItem.Text = "BigNote";
+            this.bigNoteToolStripMenuItem.Click += new System.EventHandler(this.bigNoteToolStripMenuItem_Click);
+            // 
             // QuickNoteForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -405,5 +414,6 @@
         private System.Windows.Forms.Label lblTamamlananlarListesi;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ToolStripMenuItem dövizToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem bigNoteToolStripMenuItem;
     }
 }
