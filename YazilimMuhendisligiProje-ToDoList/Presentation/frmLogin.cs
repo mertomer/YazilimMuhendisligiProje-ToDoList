@@ -22,7 +22,7 @@ namespace YazilimMuhendisligiProje_ToDoList.Presentation
         {
             InitializeComponent();
         }
-        SqlConnection baglanti=new SqlConnection(@"Data Source=DESKTOP-3VHA91B\SQLEXPRESS;Initial Catalog=DBYAPILACAKLARLISTESI1;Integrated Security=True;");
+        SqlConnection baglanti=new SqlConnection(@"Data Source=MERT\SQLEXPRESS;Initial Catalog=db_YapilacaklarListesi23;Integrated Security=True;");
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -37,14 +37,10 @@ namespace YazilimMuhendisligiProje_ToDoList.Presentation
 
             if (dr.Read()==true)
             {
-                
-                
-                QuickNoteForm frm = new QuickNoteForm();
-                
-                frm.userId = dr.GetInt32(0);
-                UserWrite = frm.userId;
-                frm.Show();
 
+
+                QuickNoteForm frm = new QuickNoteForm(dr.GetInt32(0));
+                frm.Show();
                 this.Hide();
 
             }
