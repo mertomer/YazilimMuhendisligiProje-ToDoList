@@ -213,11 +213,11 @@
     <Compile Include="Presentation\QuickNoteForm.Designer.cs">
       <DependentUpon>QuickNoteForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentation\Form3.cs">
+    <Compile Include="Presentation\BigNoteForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentation\Form3.Designer.cs">
-      <DependentUpon>Form3.cs</DependentUpon>
+    <Compile Include="Presentation\BigNoteForm.Designer.cs">
+      <DependentUpon>BigNoteForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentation\frmRegister.cs">
       <SubType>Form</SubType>
@@ -251,8 +251,8 @@
     <EmbeddedResource Include="Presentation\QuickNoteForm.resx">
       <DependentUpon>QuickNoteForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentation\Form3.resx">
-      <DependentUpon>Form3.cs</DependentUpon>
+    <EmbeddedResource Include="Presentation\BigNoteForm.resx">
+      <DependentUpon>BigNoteForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation\frmRegister.resx">
       <DependentUpon>frmRegister.cs</DependentUpon>

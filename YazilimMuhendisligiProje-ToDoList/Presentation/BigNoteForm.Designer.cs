@@ -1,6 +1,6 @@
 ﻿namespace YazilimMuhendisligiProje_ToDoList.Presentation
 {
-    partial class Form3
+    partial class BigNoteForm
     {
         /// <summary>
         /// Required designer variable.

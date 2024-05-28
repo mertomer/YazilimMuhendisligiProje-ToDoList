@@ -136,7 +136,7 @@ namespace YazilimMuhendisligiProje_ToDoList
 
         private void bigNoteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new Form3().Show();
+            new BigNoteForm().Show();
             this.Hide();
         }
     }
