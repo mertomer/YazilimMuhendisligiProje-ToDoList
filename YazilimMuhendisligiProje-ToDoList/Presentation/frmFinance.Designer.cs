@@ -101,6 +101,7 @@
             this.Controls.Add(this.cmbDoviz);
             this.Name = "frmFinance";
             this.Text = "frmFinance";
+            this.Load += new System.EventHandler(this.frmFinance_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

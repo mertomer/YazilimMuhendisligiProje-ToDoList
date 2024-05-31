@@ -140,6 +140,12 @@ namespace YazilimMuhendisligiProje_ToDoList
             new Form3(userId).Show();
             this.Hide();
         }
+
+        private void finansİşlemleriToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new frmFinance().Show();
+            this.Hide();
+        }
     }
 }
 //HUAWEI=Data Source=MERT\SQLEXPRESS;Initial Catalog=db_YapilacaklarListesi23;Integrated Security=True;

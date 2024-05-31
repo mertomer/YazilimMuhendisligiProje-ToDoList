@@ -77,5 +77,10 @@ namespace YazilimMuhendisligiProje_ToDoList.Presentation
 
             }
         }
+
+        private void frmFinance_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
