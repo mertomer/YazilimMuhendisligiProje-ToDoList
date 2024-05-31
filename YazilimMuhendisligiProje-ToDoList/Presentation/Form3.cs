@@ -20,100 +20,102 @@ namespace YazilimMuhendisligiProje_ToDoList.Presentation
         SqlConnection baglanti;
         SqlCommand komut;
         SqlDataAdapter da;
-        public Form3()
+        public int userId;
+        public Form3(int userId)
         {
             InitializeComponent();
-         
-          
+
+            this.userId = userId;
+
 
         }
 
-        public int userId;
-         void kullanicigetir()
+        
+
+        void kullanicigetir()
      {
             string selectedDate = monthCalendar1.SelectionStart.ToString("yyyy-MM-dd");
 
-            baglanti = new SqlConnection("Data Source=LAPTOP-DR0CC8RT\\SQLEXPRESS;Initial Catalog=db_YapilacaklarListesi23;Integrated Security=True;");
-             
-                 baglanti.Open();
-        
-            da =new SqlDataAdapter("SELECT * FROM TBLBIGNOTE WHERE NoteDate = '" + selectedDate + "' and [User]= '"+userId+"'", baglanti);
-                     DataTable tablo=new DataTable();
-                    da.Fill(tablo);
-                    dataGridView1.DataSource= tablo;
-               baglanti.Close();
-          
-     }
+            using (baglanti = new SqlConnection("Data Source=MERT\\SQLEXPRESS;Initial Catalog=db_YapilacaklarListesi23;Integrated Security=True;"))
+            {
+                da = new SqlDataAdapter("SELECT * FROM TBLBIGNOTE1 WHERE CONVERT(date, NoteDate) = @selectedDate AND [User] = @userId", baglanti);
+                da.SelectCommand.Parameters.AddWithValue("@selectedDate", selectedDate);
+                da.SelectCommand.Parameters.AddWithValue("@userId", userId);
+
+                DataTable tablo = new DataTable();
+                da.Fill(tablo);
+                dataGridView1.DataSource = tablo;
+            }
+
+        }
 
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
-
+            DateTime selectedTime = dateTimePicker1.Value;
+            saat = selectedTime.ToString("HH:mm");
         }
 
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             string selectedDate = monthCalendar1.SelectionStart.ToString("yyyy-MM-dd");
-              
-         
-           
-             
-           
-              
-                
+
         }
 
         private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
         {
+            kullanicigetir();
             DateTime selectedDate = e.Start;
-         //Değşken selected date de saklanıyor. buna sql bağlayacağız şimdi.
-
-           
-            string selectedMonth = selectedDate.ToString("MMMM"); // Ay ismini alır
-            int selectedYear = selectedDate.Year; // Yıl bilgisini alır
-
-            // Label kontrolüne ay ve yıl bilgisini yazdır
+            string selectedMonth = selectedDate.ToString("MMMM");
+            int selectedYear = selectedDate.Year;
             label8.Text = selectedMonth + " " + selectedYear.ToString();
 
-            kullanicigetir();
-
-         
         }
        
 
+        
         private void button36_Click(object sender, EventArgs e)
         {
             string selectedDate = monthCalendar1.SelectionStart.ToString("yyyy-MM-dd");
-            //Burada değerimiz saat dk olarak tutuluyor saniyeyide eklememiz lazım.
-            selectedDate += saat;
+            string fullDateTime = selectedDate + " " + saat + ":00";
+
+            if (!DateTime.TryParse(fullDateTime, out DateTime noteDateTime))
+            {
+                MessageBox.Show("Geçersiz tarih ve saat formatı: " + fullDateTime, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             string task = txtBox1.Text;
-            int user;
-            user = userId;
-            frmLogin frmLogin = new frmLogin();
-            string sorgu = "INSERT INTO TBLBIGNOTE([User],BigNote,NoteDate) VALUES(@user,@task,@selectedDate)";
-            komut = new SqlCommand(sorgu, baglanti);
 
-            
-                            
-            baglanti.Open();
+            string sorgu = "INSERT INTO TBLBIGNOTE1([User], BigNote, NoteDate, NoteTime, NoteDateAndTime) VALUES(@user, @task, @noteDate, @noteTime, @noteDateAndTime)";
+            using (baglanti = new SqlConnection("Data Source=MERT\\SQLEXPRESS;Initial Catalog=db_YapilacaklarListesi23;Integrated Security=True;"))
+            {
+                komut = new SqlCommand(sorgu, baglanti);
+                komut.Parameters.AddWithValue("@user", userId);
+                komut.Parameters.AddWithValue("@task", task);
+                komut.Parameters.AddWithValue("@noteDate", selectedDate);
+                komut.Parameters.AddWithValue("@noteTime", saat);
+                komut.Parameters.AddWithValue("@noteDateAndTime", fullDateTime); // Tarih ve saat birleşimi
 
-            komut.Parameters.AddWithValue("@[User]", user);
-            komut.Parameters.AddWithValue("@BigNote",task);
-            komut.Parameters.AddWithValue("@NoteDate", selectedDate);
-             
-           
-           komut.ExecuteNonQuery();
-            baglanti.Close();
-
-            kullanicigetir();
-
-
-
-
+                try
+                {
+                    baglanti.Open();
+                    komut.ExecuteNonQuery();
+                    MessageBox.Show("Not başarıyla eklendi.");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Hata: " + ex.Message);
+                }
+                finally
+                {
+                    baglanti.Close();
+                    kullanicigetir();
+                }
+            }
         }
-
-        private void gtrTxt_Click(object sender, EventArgs e)
+    private void gtrTxt_Click(object sender, EventArgs e)
         {
 
         }
@@ -129,7 +131,13 @@ namespace YazilimMuhendisligiProje_ToDoList.Presentation
         private void dateTimePicker1_ValueChanged_1(object sender, EventArgs e)
         {
             DateTime selectedTime = dateTimePicker1.Value;
-             saat = selectedTime.ToString("HH:mm");
+            saat = selectedTime.ToString("HH:mm");
+        }
+
+            private void txtBox1_TextChanged(object sender, EventArgs e)
+        {
+
+
         }
     }
 }

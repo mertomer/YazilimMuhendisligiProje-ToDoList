@@ -20,6 +20,7 @@
             base.Dispose(disposing);
         }
 
+
         #region Windows Form Designer generated code
 
         /// <summary>
@@ -46,6 +47,7 @@
             this.txtBox1.Name = "txtBox1";
             this.txtBox1.Size = new System.Drawing.Size(280, 125);
             this.txtBox1.TabIndex = 77;
+            this.txtBox1.TextChanged += new System.EventHandler(this.txtBox1_TextChanged);
             // 
             // button36
             // 

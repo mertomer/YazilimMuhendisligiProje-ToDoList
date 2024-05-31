@@ -14,14 +14,15 @@ namespace YazilimMuhendisligiProje_ToDoList
 {
     public partial class QuickNoteForm : Form
     {
-       
-        public QuickNoteForm()
+        public int userId;
+
+        public QuickNoteForm(int userId)
         {
             InitializeComponent();
             this.Load += QuickNoteForm_Load;
-
+            this.userId = userId;
         }
-        SqlConnection baglanti = new SqlConnection(@"Data Source=DESKTOP-3VHA91B\SQLEXPRESS;Initial Catalog=DBYAPILACAKLARLISTESI1;Integrated Security=True;");
+        SqlConnection baglanti = new SqlConnection(@"Data Source=MERT\SQLEXPRESS;Initial Catalog=db_YapilacaklarListesi23;Integrated Security=True;");
         private void QuickNoteForm_Load(object sender, EventArgs e)
         {
             List<string> kullaniciNotlari = NotlariCek(userId);
@@ -55,7 +56,7 @@ namespace YazilimMuhendisligiProje_ToDoList
             return notlar;
         }
        
-        public int userId;
+       
 
         private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
@@ -136,7 +137,7 @@ namespace YazilimMuhendisligiProje_ToDoList
 
         private void bigNoteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new Form3().Show();
+            new Form3(userId).Show();
             this.Hide();
         }
     }
