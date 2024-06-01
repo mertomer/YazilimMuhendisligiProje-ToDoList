@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace YazilimMuhendisligiProje_ToDoList.Presentation
 {
-    public partial class Form3 : Form
+    public partial class BigNoteForm : Form
    
     
     {
@@ -20,7 +20,7 @@ namespace YazilimMuhendisligiProje_ToDoList.Presentation
         SqlCommand komut;
         SqlDataAdapter da;
         public int userId;
-        public Form3(int userId)
+        public BigNoteForm(int userId)
         {
             InitializeComponent();
 
