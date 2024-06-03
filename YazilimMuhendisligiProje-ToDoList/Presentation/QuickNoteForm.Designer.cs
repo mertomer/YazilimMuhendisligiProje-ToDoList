@@ -47,6 +47,7 @@
             this.düzeltToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.silToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bigNoteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.finansİşlemleriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hakkındaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.uygulamaHakkındaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
@@ -57,7 +58,6 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.lstTamamlananlarListesi = new System.Windows.Forms.ListBox();
             this.lblTamamlananlarListesi = new System.Windows.Forms.Label();
-            this.finansİşlemleriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -79,9 +79,9 @@
             this.pasteToolStripButton,
             this.toolStripSeparator1,
             this.helpToolStripButton});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 24);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 28);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1548, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(1924, 27);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
@@ -92,7 +92,7 @@
             this.newToolStripButton.Image = global::YazilimMuhendisligiProje_ToDoList.Properties.Resources._1564491_add_create_new_plus_icon;
             this.newToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.newToolStripButton.Name = "newToolStripButton";
-            this.newToolStripButton.Size = new System.Drawing.Size(24, 24);
+            this.newToolStripButton.Size = new System.Drawing.Size(29, 24);
             this.newToolStripButton.Text = "&New";
             this.newToolStripButton.Click += new System.EventHandler(this.newToolStripButton_Click);
             // 
@@ -102,7 +102,7 @@
             this.openToolStripButton.Image = global::YazilimMuhendisligiProje_ToDoList.Properties.Resources._1564503_add_business_edit_editor_new_icon__1_;
             this.openToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.openToolStripButton.Name = "openToolStripButton";
-            this.openToolStripButton.Size = new System.Drawing.Size(24, 24);
+            this.openToolStripButton.Size = new System.Drawing.Size(29, 24);
             this.openToolStripButton.Text = "&Open";
             // 
             // copyToolStripButton
@@ -111,7 +111,7 @@
             this.copyToolStripButton.Image = global::YazilimMuhendisligiProje_ToDoList.Properties.Resources._1564505_close_delete_exit_remove_icon;
             this.copyToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.copyToolStripButton.Name = "copyToolStripButton";
-            this.copyToolStripButton.Size = new System.Drawing.Size(24, 24);
+            this.copyToolStripButton.Size = new System.Drawing.Size(29, 24);
             this.copyToolStripButton.Text = "&Copy";
             // 
             // toolStripSeparator
@@ -125,7 +125,7 @@
             this.cutToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("cutToolStripButton.Image")));
             this.cutToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.cutToolStripButton.Name = "cutToolStripButton";
-            this.cutToolStripButton.Size = new System.Drawing.Size(24, 24);
+            this.cutToolStripButton.Size = new System.Drawing.Size(29, 24);
             this.cutToolStripButton.Text = "C&ut";
             // 
             // pasteToolStripButton
@@ -134,7 +134,7 @@
             this.pasteToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("pasteToolStripButton.Image")));
             this.pasteToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.pasteToolStripButton.Name = "pasteToolStripButton";
-            this.pasteToolStripButton.Size = new System.Drawing.Size(24, 24);
+            this.pasteToolStripButton.Size = new System.Drawing.Size(29, 24);
             this.pasteToolStripButton.Text = "&Paste";
             // 
             // toolStripSeparator1
@@ -148,7 +148,7 @@
             this.helpToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("helpToolStripButton.Image")));
             this.helpToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.helpToolStripButton.Name = "helpToolStripButton";
-            this.helpToolStripButton.Size = new System.Drawing.Size(24, 24);
+            this.helpToolStripButton.Size = new System.Drawing.Size(29, 24);
             this.helpToolStripButton.Text = "He&lp";
             // 
             // menuStrip1
@@ -160,7 +160,7 @@
             this.hakkındaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1548, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1924, 28);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -169,13 +169,13 @@
             this.dosyaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.çıkışToolStripMenuItem});
             this.dosyaToolStripMenuItem.Name = "dosyaToolStripMenuItem";
-            this.dosyaToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
+            this.dosyaToolStripMenuItem.Size = new System.Drawing.Size(64, 24);
             this.dosyaToolStripMenuItem.Text = "Dosya";
             // 
             // çıkışToolStripMenuItem
             // 
             this.çıkışToolStripMenuItem.Name = "çıkışToolStripMenuItem";
-            this.çıkışToolStripMenuItem.Size = new System.Drawing.Size(99, 22);
+            this.çıkışToolStripMenuItem.Size = new System.Drawing.Size(122, 26);
             this.çıkışToolStripMenuItem.Text = "Çıkış";
             // 
             // toDToolStripMenuItem
@@ -188,20 +188,20 @@
             this.bigNoteToolStripMenuItem,
             this.finansİşlemleriToolStripMenuItem});
             this.toDToolStripMenuItem.Name = "toDToolStripMenuItem";
-            this.toDToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
+            this.toDToolStripMenuItem.Size = new System.Drawing.Size(59, 24);
             this.toDToolStripMenuItem.Text = "ToDo";
             // 
             // yeToolStripMenuItem
             // 
             this.yeToolStripMenuItem.Image = global::YazilimMuhendisligiProje_ToDoList.Properties.Resources._1564491_add_create_new_plus_icon;
             this.yeToolStripMenuItem.Name = "yeToolStripMenuItem";
-            this.yeToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
+            this.yeToolStripMenuItem.Size = new System.Drawing.Size(193, 26);
             this.yeToolStripMenuItem.Text = "Yeni";
             // 
             // dövizToolStripMenuItem
             // 
             this.dövizToolStripMenuItem.Name = "dövizToolStripMenuItem";
-            this.dövizToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
+            this.dövizToolStripMenuItem.Size = new System.Drawing.Size(193, 26);
             this.dövizToolStripMenuItem.Text = "Döviz";
             this.dövizToolStripMenuItem.Click += new System.EventHandler(this.dövizToolStripMenuItem_Click);
             // 
@@ -209,43 +209,50 @@
             // 
             this.düzeltToolStripMenuItem.Image = global::YazilimMuhendisligiProje_ToDoList.Properties.Resources._1564503_add_business_edit_editor_new_icon__1_;
             this.düzeltToolStripMenuItem.Name = "düzeltToolStripMenuItem";
-            this.düzeltToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
+            this.düzeltToolStripMenuItem.Size = new System.Drawing.Size(193, 26);
             this.düzeltToolStripMenuItem.Text = "Düzelt";
             // 
             // silToolStripMenuItem
             // 
             this.silToolStripMenuItem.Image = global::YazilimMuhendisligiProje_ToDoList.Properties.Resources._1564505_close_delete_exit_remove_icon;
             this.silToolStripMenuItem.Name = "silToolStripMenuItem";
-            this.silToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
+            this.silToolStripMenuItem.Size = new System.Drawing.Size(193, 26);
             this.silToolStripMenuItem.Text = "Sil";
             // 
             // bigNoteToolStripMenuItem
             // 
             this.bigNoteToolStripMenuItem.Name = "bigNoteToolStripMenuItem";
-            this.bigNoteToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
+            this.bigNoteToolStripMenuItem.Size = new System.Drawing.Size(193, 26);
             this.bigNoteToolStripMenuItem.Text = "BigNote";
             this.bigNoteToolStripMenuItem.Click += new System.EventHandler(this.bigNoteToolStripMenuItem_Click);
+            // 
+            // finansİşlemleriToolStripMenuItem
+            // 
+            this.finansİşlemleriToolStripMenuItem.Name = "finansİşlemleriToolStripMenuItem";
+            this.finansİşlemleriToolStripMenuItem.Size = new System.Drawing.Size(193, 26);
+            this.finansİşlemleriToolStripMenuItem.Text = "Finans İşlemleri";
+            this.finansİşlemleriToolStripMenuItem.Click += new System.EventHandler(this.finansİşlemleriToolStripMenuItem_Click);
             // 
             // hakkındaToolStripMenuItem
             // 
             this.hakkındaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.uygulamaHakkındaToolStripMenuItem});
             this.hakkındaToolStripMenuItem.Name = "hakkındaToolStripMenuItem";
-            this.hakkındaToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
+            this.hakkındaToolStripMenuItem.Size = new System.Drawing.Size(85, 24);
             this.hakkındaToolStripMenuItem.Text = "Hakkında";
             // 
             // uygulamaHakkındaToolStripMenuItem
             // 
             this.uygulamaHakkındaToolStripMenuItem.Name = "uygulamaHakkındaToolStripMenuItem";
-            this.uygulamaHakkındaToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.uygulamaHakkındaToolStripMenuItem.Size = new System.Drawing.Size(225, 26);
             this.uygulamaHakkındaToolStripMenuItem.Text = "Uygulama Hakkında";
             this.uygulamaHakkındaToolStripMenuItem.Click += new System.EventHandler(this.uygulamaHakkındaToolStripMenuItem_Click);
             // 
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 51);
-            this.splitContainer1.Margin = new System.Windows.Forms.Padding(9, 7, 9, 7);
+            this.splitContainer1.Location = new System.Drawing.Point(0, 55);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(12, 9, 12, 9);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -254,27 +261,27 @@
             this.splitContainer1.Panel1.Controls.Add(this.lblYapilacaklarListesi);
             this.splitContainer1.Panel1.Controls.Add(this.panel1);
             this.splitContainer1.Panel1.Controls.Add(this.grpYeniGorev);
-            this.splitContainer1.Panel1.Padding = new System.Windows.Forms.Padding(16, 11, 16, 11);
+            this.splitContainer1.Panel1.Padding = new System.Windows.Forms.Padding(21, 14, 21, 14);
             this.splitContainer1.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel1_Paint);
             // 
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.lstTamamlananlarListesi);
             this.splitContainer1.Panel2.Controls.Add(this.lblTamamlananlarListesi);
-            this.splitContainer1.Panel2.Padding = new System.Windows.Forms.Padding(16, 11, 16, 11);
-            this.splitContainer1.Size = new System.Drawing.Size(1548, 959);
-            this.splitContainer1.SplitterDistance = 740;
-            this.splitContainer1.SplitterWidth = 12;
+            this.splitContainer1.Panel2.Padding = new System.Windows.Forms.Padding(21, 14, 21, 14);
+            this.splitContainer1.Size = new System.Drawing.Size(1924, 1000);
+            this.splitContainer1.SplitterDistance = 919;
+            this.splitContainer1.SplitterWidth = 16;
             this.splitContainer1.TabIndex = 2;
             // 
             // clbYapilacaklarListesi
             // 
             this.clbYapilacaklarListesi.Dock = System.Windows.Forms.DockStyle.Fill;
             this.clbYapilacaklarListesi.FormattingEnabled = true;
-            this.clbYapilacaklarListesi.Location = new System.Drawing.Point(16, 297);
-            this.clbYapilacaklarListesi.Margin = new System.Windows.Forms.Padding(9, 7, 9, 7);
+            this.clbYapilacaklarListesi.Location = new System.Drawing.Point(21, 367);
+            this.clbYapilacaklarListesi.Margin = new System.Windows.Forms.Padding(12, 9, 12, 9);
             this.clbYapilacaklarListesi.Name = "clbYapilacaklarListesi";
-            this.clbYapilacaklarListesi.Size = new System.Drawing.Size(708, 651);
+            this.clbYapilacaklarListesi.Size = new System.Drawing.Size(877, 619);
             this.clbYapilacaklarListesi.TabIndex = 6;
             this.clbYapilacaklarListesi.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged);
             // 
@@ -282,32 +289,32 @@
             // 
             this.lblYapilacaklarListesi.AutoSize = true;
             this.lblYapilacaklarListesi.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblYapilacaklarListesi.Location = new System.Drawing.Point(16, 262);
-            this.lblYapilacaklarListesi.Margin = new System.Windows.Forms.Padding(9, 0, 9, 0);
+            this.lblYapilacaklarListesi.Location = new System.Drawing.Point(21, 323);
+            this.lblYapilacaklarListesi.Margin = new System.Windows.Forms.Padding(12, 0, 12, 0);
             this.lblYapilacaklarListesi.Name = "lblYapilacaklarListesi";
-            this.lblYapilacaklarListesi.Padding = new System.Windows.Forms.Padding(16, 11, 16, 11);
-            this.lblYapilacaklarListesi.Size = new System.Drawing.Size(129, 35);
+            this.lblYapilacaklarListesi.Padding = new System.Windows.Forms.Padding(21, 14, 21, 14);
+            this.lblYapilacaklarListesi.Size = new System.Drawing.Size(166, 44);
             this.lblYapilacaklarListesi.TabIndex = 5;
             this.lblYapilacaklarListesi.Text = "Yapılacaklar Listesi";
             // 
             // panel1
             // 
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(16, 240);
-            this.panel1.Margin = new System.Windows.Forms.Padding(9, 7, 9, 7);
+            this.panel1.Location = new System.Drawing.Point(21, 296);
+            this.panel1.Margin = new System.Windows.Forms.Padding(12, 9, 12, 9);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(708, 22);
+            this.panel1.Size = new System.Drawing.Size(877, 27);
             this.panel1.TabIndex = 4;
             // 
             // grpYeniGorev
             // 
             this.grpYeniGorev.Controls.Add(this.textBox1);
             this.grpYeniGorev.Dock = System.Windows.Forms.DockStyle.Top;
-            this.grpYeniGorev.Location = new System.Drawing.Point(16, 11);
-            this.grpYeniGorev.Margin = new System.Windows.Forms.Padding(9, 7, 9, 7);
+            this.grpYeniGorev.Location = new System.Drawing.Point(21, 14);
+            this.grpYeniGorev.Margin = new System.Windows.Forms.Padding(12, 9, 12, 9);
             this.grpYeniGorev.Name = "grpYeniGorev";
-            this.grpYeniGorev.Padding = new System.Windows.Forms.Padding(31, 22, 31, 22);
-            this.grpYeniGorev.Size = new System.Drawing.Size(708, 229);
+            this.grpYeniGorev.Padding = new System.Windows.Forms.Padding(41, 27, 41, 27);
+            this.grpYeniGorev.Size = new System.Drawing.Size(877, 282);
             this.grpYeniGorev.TabIndex = 3;
             this.grpYeniGorev.TabStop = false;
             this.grpYeniGorev.Text = "Yeni Görev";
@@ -315,11 +322,11 @@
             // textBox1
             // 
             this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox1.Location = new System.Drawing.Point(31, 34);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(9, 7, 9, 7);
+            this.textBox1.Location = new System.Drawing.Point(41, 42);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(12, 9, 12, 9);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(646, 173);
+            this.textBox1.Size = new System.Drawing.Size(795, 213);
             this.textBox1.TabIndex = 0;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -327,43 +334,37 @@
             // 
             this.lstTamamlananlarListesi.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lstTamamlananlarListesi.FormattingEnabled = true;
-            this.lstTamamlananlarListesi.Location = new System.Drawing.Point(16, 46);
-            this.lstTamamlananlarListesi.Margin = new System.Windows.Forms.Padding(9, 7, 9, 7);
+            this.lstTamamlananlarListesi.ItemHeight = 16;
+            this.lstTamamlananlarListesi.Location = new System.Drawing.Point(21, 58);
+            this.lstTamamlananlarListesi.Margin = new System.Windows.Forms.Padding(12, 9, 12, 9);
             this.lstTamamlananlarListesi.Name = "lstTamamlananlarListesi";
-            this.lstTamamlananlarListesi.Size = new System.Drawing.Size(764, 902);
+            this.lstTamamlananlarListesi.Size = new System.Drawing.Size(947, 928);
             this.lstTamamlananlarListesi.TabIndex = 3;
             // 
             // lblTamamlananlarListesi
             // 
             this.lblTamamlananlarListesi.AutoSize = true;
             this.lblTamamlananlarListesi.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblTamamlananlarListesi.Location = new System.Drawing.Point(16, 11);
-            this.lblTamamlananlarListesi.Margin = new System.Windows.Forms.Padding(9, 0, 9, 0);
+            this.lblTamamlananlarListesi.Location = new System.Drawing.Point(21, 14);
+            this.lblTamamlananlarListesi.Margin = new System.Windows.Forms.Padding(12, 0, 12, 0);
             this.lblTamamlananlarListesi.Name = "lblTamamlananlarListesi";
-            this.lblTamamlananlarListesi.Padding = new System.Windows.Forms.Padding(16, 11, 16, 11);
-            this.lblTamamlananlarListesi.Size = new System.Drawing.Size(143, 35);
+            this.lblTamamlananlarListesi.Padding = new System.Windows.Forms.Padding(21, 14, 21, 14);
+            this.lblTamamlananlarListesi.Size = new System.Drawing.Size(185, 44);
             this.lblTamamlananlarListesi.TabIndex = 6;
             this.lblTamamlananlarListesi.Text = "Tamamlananlar Listesi";
             // 
-            // finansİşlemleriToolStripMenuItem
-            // 
-            this.finansİşlemleriToolStripMenuItem.Name = "finansİşlemleriToolStripMenuItem";
-            this.finansİşlemleriToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
-            this.finansİşlemleriToolStripMenuItem.Text = "Finans İşlemleri";
-            this.finansİşlemleriToolStripMenuItem.Click += new System.EventHandler(this.finansİşlemleriToolStripMenuItem_Click);
-            // 
             // QuickNoteForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1548, 1010);
+            this.ClientSize = new System.Drawing.Size(1924, 1055);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(9, 7, 9, 7);
+            this.Margin = new System.Windows.Forms.Padding(12, 9, 12, 9);
             this.Name = "QuickNoteForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";

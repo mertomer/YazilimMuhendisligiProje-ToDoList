@@ -88,6 +88,11 @@ namespace YazilimMuhendisligiProje_ToDoList.Presentation
         {
 
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 //Data Source=DESKTOP-3VHA91B\SQLEXPRESS;Initial Catalog=db_YapilacaklarListesi;Integrated Security=True;Trust Server Certificate=True
