@@ -111,10 +111,11 @@
             this.dateTimePicker1.TabIndex = 83;
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged_1);
             // 
-            // Form3
+            // BigNoteForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::YazilimMuhendisligiProje_ToDoList.Properties.Resources.desktop_wallpaper_30_cool_plain_backgrounds_plain_but_nice_backgrounds;
             this.ClientSize = new System.Drawing.Size(1006, 511);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.gtrTxt);
@@ -124,7 +125,7 @@
             this.Controls.Add(this.txtBox1);
             this.Controls.Add(this.label8);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "Form3";
+            this.Name = "BigNoteForm";
             this.Text = "Form3";
             this.Load += new System.EventHandler(this.Form3_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

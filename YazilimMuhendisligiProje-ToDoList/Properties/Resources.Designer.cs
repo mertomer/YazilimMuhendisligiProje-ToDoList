@@ -63,6 +63,16 @@ namespace YazilimMuhendisligiProje_ToDoList.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _141112134420_bitcoin_graph {
+            get {
+                object obj = ResourceManager.GetObject("141112134420-bitcoin-graph", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _1564491_add_create_new_plus_icon {
             get {
                 object obj = ResourceManager.GetObject("1564491_add_create_new_plus_icon", resourceCulture);
@@ -93,9 +103,69 @@ namespace YazilimMuhendisligiProje_ToDoList.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Bitcoins {
+            get {
+                object obj = ResourceManager.GetObject("Bitcoins", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap desktop_wallpaper_30_cool_plain_backgrounds_plain_but_nice_backgrounds {
+            get {
+                object obj = ResourceManager.GetObject("desktop-wallpaper-30-cool-plain-backgrounds-plain-but-nice-backgrounds", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap e_doviz_2_1024x638 {
             get {
                 object obj = ResourceManager.GetObject("e-doviz-2-1024x638", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap images {
+            get {
+                object obj = ResourceManager.GetObject("images", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pexels_photo_730564 {
+            get {
+                object obj = ResourceManager.GetObject("pexels-photo-730564", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pexels_photo_7305641 {
+            get {
+                object obj = ResourceManager.GetObject("pexels-photo-7305641", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pngtree_bit_coin_crypto_currency_money_image_15649091 {
+            get {
+                object obj = ResourceManager.GetObject("pngtree-bit-coin-crypto-currency-money-image_15649091", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

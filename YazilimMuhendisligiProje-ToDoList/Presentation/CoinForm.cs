@@ -128,5 +128,10 @@ private void lblCoinVolume_Click(object sender, EventArgs e)
         {
 
         }
+
+        private void CoinForm_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

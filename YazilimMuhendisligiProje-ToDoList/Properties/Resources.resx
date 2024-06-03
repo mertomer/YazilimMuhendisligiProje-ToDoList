@@ -118,16 +118,37 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="1564503_add_business_edit_editor_new_icon (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1564503_add_business_edit_editor_new_icon (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Bitcoins" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Bitcoins.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="1564491_add_create_new_plus_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1564491_add_create_new_plus_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="e-doviz-2-1024x638" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\e-doviz-2-1024x638.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="1564505_close_delete_exit_remove_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1564505_close_delete_exit_remove_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="e-doviz-2-1024x638" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\e-doviz-2-1024x638.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="pngtree-bit-coin-crypto-currency-money-image_15649091" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pngtree-bit-coin-crypto-currency-money-image_15649091.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="desktop-wallpaper-30-cool-plain-backgrounds-plain-but-nice-backgrounds" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\desktop-wallpaper-30-cool-plain-backgrounds-plain-but-nice-backgrounds.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pexels-photo-730564" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pexels-photo-730564.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="images" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pexels-photo-7305641" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pexels-photo-7305641.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1564491_add_create_new_plus_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1564491_add_create_new_plus_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1564503_add_business_edit_editor_new_icon (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1564503_add_business_edit_editor_new_icon (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="141112134420-bitcoin-graph" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\141112134420-bitcoin-graph.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

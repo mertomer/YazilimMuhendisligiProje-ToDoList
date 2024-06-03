@@ -46,8 +46,13 @@ namespace YazilimMuhendisligiProje_ToDoList.Presentation
             var coins = JsonConvert.DeserializeObject<List<Coin>>(responseString);
             return coins;
         }
+
+        private void frmcoin_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
-    
+
     public class Coin
     {
         [JsonProperty("id")]

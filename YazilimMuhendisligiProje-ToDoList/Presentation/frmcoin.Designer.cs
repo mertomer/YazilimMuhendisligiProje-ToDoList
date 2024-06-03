@@ -41,30 +41,35 @@ namespace YazilimMuhendisligiProje_ToDoList.Presentation
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
+            this.dataGridView1.Location = new System.Drawing.Point(16, 15);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(776, 376);
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.Size = new System.Drawing.Size(1035, 463);
             this.dataGridView1.TabIndex = 0;
             // 
             // btnFetchData
             // 
-            this.btnFetchData.Location = new System.Drawing.Point(713, 415);
+            this.btnFetchData.Location = new System.Drawing.Point(951, 511);
+            this.btnFetchData.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnFetchData.Name = "btnFetchData";
-            this.btnFetchData.Size = new System.Drawing.Size(75, 23);
+            this.btnFetchData.Size = new System.Drawing.Size(100, 28);
             this.btnFetchData.TabIndex = 1;
             this.btnFetchData.Text = "Fetch Data";
             this.btnFetchData.UseVisualStyleBackColor = true;
             this.btnFetchData.Click += new System.EventHandler(this.btnFetchData_Click);
             // 
-            // MainForm
+            // frmcoin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.btnFetchData);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "MainForm";
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Name = "frmcoin";
             this.Text = "Crypto Price Viewer";
+            this.Load += new System.EventHandler(this.frmcoin_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 

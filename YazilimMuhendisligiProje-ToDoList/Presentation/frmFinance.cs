@@ -82,5 +82,10 @@ namespace YazilimMuhendisligiProje_ToDoList.Presentation
         {
 
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

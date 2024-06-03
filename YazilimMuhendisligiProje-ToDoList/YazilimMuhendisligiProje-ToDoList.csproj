@@ -349,6 +349,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="6071809_list_planing_planlist_to do_to do list_icon.ico" />
+    <None Include="Resources\141112134420-bitcoin-graph.jpg" />
+    <None Include="Resources\images.jpeg" />
+    <None Include="Resources\pexels-photo-7305641.jpeg" />
+    <None Include="Resources\pngtree-bit-coin-crypto-currency-money-image_15649091.jpg" />
+    <None Include="Resources\desktop-wallpaper-30-cool-plain-backgrounds-plain-but-nice-backgrounds.jpg" />
+    <None Include="Resources\pexels-photo-730564.jpeg" />
+    <None Include="Resources\Bitcoins.jpg" />
     <None Include="Resources\e-doviz-2-1024x638.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
