@@ -225,18 +225,6 @@
     <Compile Include="Presentation\CoinForm.Designer.cs">
       <DependentUpon>CoinForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentation\frmcoin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Presentation\frmcoin.Designer.cs">
-      <DependentUpon>frmcoin.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Presentation\frmdoviz.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Presentation\frmdoviz.Designer.cs">
-      <DependentUpon>frmdoviz.cs</DependentUpon>
-    </Compile>
     <Compile Include="Presentation\frmFinance.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -277,12 +265,6 @@
     </Compile>
     <EmbeddedResource Include="Presentation\CoinForm.resx">
       <DependentUpon>CoinForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Presentation\frmcoin.resx">
-      <DependentUpon>frmcoin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Presentation\frmdoviz.resx">
-      <DependentUpon>frmdoviz.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation\frmFinance.resx">
       <DependentUpon>frmFinance.cs</DependentUpon>

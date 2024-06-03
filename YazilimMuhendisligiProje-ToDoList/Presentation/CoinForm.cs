@@ -1,16 +1,9 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
 using System.Net.Http;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
-
 
 namespace YazilimMuhendisligiProje_ToDoList.Presentation
 {
@@ -18,10 +11,12 @@ namespace YazilimMuhendisligiProje_ToDoList.Presentation
     {
         private static readonly HttpClient client = new HttpClient();
         private List<Coin> coins;
+        public int userId;
 
-        public CoinForm()
+        public CoinForm(int userId)
         {
             InitializeComponent();
+            this.userId = userId;
             this.Load += new EventHandler(this.CoinForm_Load);
         }
 
@@ -32,7 +27,7 @@ namespace YazilimMuhendisligiProje_ToDoList.Presentation
             {
                 cmbCoin.Items.Add(coin.Name);
             }
-            cmbCoin.SelectedIndexChanged += cmbCoin_SelectedIndexChanged;  // Olay işleyicisini burada bağlayın
+            cmbCoin.SelectedIndexChanged += cmbCoin_SelectedIndexChanged;
         }
 
         private async Task<List<Coin>> FetchCoinDataAsync()
@@ -86,52 +81,58 @@ namespace YazilimMuhendisligiProje_ToDoList.Presentation
             [JsonProperty("total_volume")]
             public decimal TotalVolume { get; set; }
         }
-    
 
-
-private void lblCoinVolume_Click(object sender, EventArgs e)
+        private void lblCoinVolume_Click(object sender, EventArgs e)
         {
-
+            // Handle label click event if needed
         }
 
         private void lblCoinMarketCap_Click(object sender, EventArgs e)
         {
-
+            // Handle label click event if needed
         }
 
         private void lblCoinPrice_Click(object sender, EventArgs e)
         {
-
+            // Handle label click event if needed
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            // Handle button click event if needed
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
-
+            // Handle label click event if needed
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-
+            // Handle text box text changed event if needed
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            // Handle combo box selected index changed event if needed
         }
 
-        private void cmbCoin_SelectedIndexChanged_1(object sender, EventArgs e)
+        private void bigNoteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            new BigNoteForm(userId).Show();
+            this.Hide();
         }
 
-        private void CoinForm_Load_1(object sender, EventArgs e)
+        private void quickNoteFormToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            new QuickNoteForm(userId).Show();
+            this.Hide();
+        }
 
+        private void finansİşlemleriToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new frmFinance(userId).Show();
+            this.Hide();
         }
     }
 }
