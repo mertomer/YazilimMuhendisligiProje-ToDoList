@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -136,6 +137,41 @@ namespace YazilimMuhendisligiProje_ToDoList.Presentation
             private void txtBox1_TextChanged(object sender, EventArgs e)
         {
 
+
+        }
+
+        private void bigNoteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new CoinForm(userId).Show();
+            this.Hide();
+        }
+
+        private void finansİşlemleriToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new frmFinance(userId).Show();
+            this.Hide();
+        }
+
+        private void quickNoteFormToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new QuickNoteForm(userId).Show();
+            this.Hide();
+        }
+
+        private void uygulamaHakkındaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Process.Start(new ProcessStartInfo
+                {
+                    FileName = "https://son-deneme-web-site.vercel.app/",
+                    UseShellExecute = true
+                });
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("URL açılırken bir hata oluştu: " + ex.Message);
+            }
 
         }
     }

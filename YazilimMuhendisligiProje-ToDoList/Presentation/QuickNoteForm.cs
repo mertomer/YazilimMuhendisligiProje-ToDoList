@@ -1,8 +1,10 @@
-﻿using System;
+﻿using Org.BouncyCastle.Asn1.Cmp;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -65,7 +67,18 @@ namespace YazilimMuhendisligiProje_ToDoList
 
         private void uygulamaHakkındaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                Process.Start(new ProcessStartInfo
+                {
+                    FileName = "https://son-deneme-web-site.vercel.app/",
+                    UseShellExecute = true
+                });
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("URL açılırken bir hata oluştu: " + ex.Message);
+            }
         }
 
         private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
@@ -129,11 +142,7 @@ namespace YazilimMuhendisligiProje_ToDoList
 
         }
 
-        private void dövizToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            new frmdoviz().Show();
-            this.Hide();
-        }
+       
 
         private void bigNoteToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -143,7 +152,13 @@ namespace YazilimMuhendisligiProje_ToDoList
 
         private void finansİşlemleriToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new frmFinance().Show();
+            new frmFinance(userId).Show();
+            this.Hide();
+        }
+
+        private void cToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new CoinForm(userId).Show();
             this.Hide();
         }
     }
