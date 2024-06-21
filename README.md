@@ -10,8 +10,6 @@ Yapılacaklar Listesi Uygulaması, kullanıcıların günlük işlerini planlay�
 - [Teknolojik Altyapı](#teknolojik-altyapı)
 - [Proje Yönetimi](#proje-yönetimi)
 - [Sonuç ve Değerlendirme](#sonuç-ve-değerlendirme)
-- [Katkıda Bulunanlar](#katkıda-bulunanlar)
-- [Lisans](#lisans)
 
 ## Özellikler
 ### 1. frmLogin (Giriş Ekranı)
