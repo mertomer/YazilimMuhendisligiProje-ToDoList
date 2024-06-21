@@ -52,11 +52,13 @@ Yapılacaklar Listesi Uygulaması, kullanıcıların günlük işlerini planlay�
 1. Bu projeyi klonlayın:
    ```sh
    git clone https://github.com/mertomer/YazilimMuhendisligiProje-ToDoList.git
-Kullanım
+   
+## Kullanım
 Projeyi çalıştırmak için uygun komutları kullanarak uygulamayı başlatın.
 Giriş ekranından uygulamaya giriş yapın veya yeni bir kullanıcı olarak kayıt olun.
 Günlük işlerinizi ekleyin, döviz ve coin değerlerini izleyin ve bildirimleri ayarlayın.
-Teknolojik Altyapı
+
+## Teknolojik Altyapı
 CI/CD Süreçleri
 Continuous Integration: Geliştiriciler tarafından yapılan kod değişikliklerinin sürekli olarak GitHub’a push edilmesi ve bu değişikliklerin otomatik olarak test edilmesi sağlandı.
 Continuous Deployment: Başarılı testlerin ardından uygulamanın otomatik olarak dağıtım ortamına gönderilmesi sağlandı.
@@ -64,12 +66,14 @@ Veritabanı
 Veritabanı Yönetim Sistemi: SQL Server
 Kullanım: Kullanıcıya ait mail adresi, kullanıcı adı, şifre, belirlediği tarih, döviz ve coin değerleri gibi verilerin saklanması ve yönetimi.
 Veri Yapısı: Kullanıcıların verilerinin saklandığı tablo, döviz kurlarının saklandığı tablo gibi ayrı ayrı düzenli olarak tutulan tablolarda uygulamanın düzenli şekilde çalışması ve istenilen işlemlere cevap vermesi sağlandı.
-Proje Yönetimi
+
+## Proje Yönetimi
 JIRA
 Proje yönetimi ve iş bölümü için JIRA kullanıldı. Görevler, sprintler ve backloglar oluşturularak proje yönetildi. Epic, Story ve Task gibi başlıklar altında yapılan görevler düzenlendi.
 GitHub
 Kodların senkronize edilmesi ve sürüm kontrolü için GitHub kullanıldı. Pull request’ler ve code review süreçleri ile kalite kontrol sağlandı.
-Sonuç ve Değerlendirme
+
+## Sonuç ve Değerlendirme
 Yapılacaklar Listesi Uygulaması, kullanıcıların günlük işlerini organize etmelerine ve finansal piyasalar hakkında güncel bilgi almalarına yardımcı 
 olan kapsamlı bir çözüm sunar. Uygulama sayesinde kullanıcı günlük hayatta yapması gereken işleri planlayıp düzene sokarken, aynı zamanda güncel döviz 
 kurlarına ve güncel coin piyasalarına hakim olur. Proje, CI/CD süreçlerinin başarılı bir şekilde uygulanması ve sağlam bir veri tabanı altyapısı ile desteklenmiştir. 
